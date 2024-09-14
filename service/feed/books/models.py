@@ -8,7 +8,7 @@ class Book(models.Model):
     desk = models.TextField()
     link = models.CharField(max_length=255)
     name = models.CharField(max_length=125)
-    author = models.CharField(max_length=255)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     sub_id = models.ForeignKey('Sub', on_delete=models.CASCADE)
     tag_id = models.ForeignKey('Tag', on_delete=models.CASCADE)
 
