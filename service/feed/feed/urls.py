@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
 
-from books.views import BooksView
+from books.views import BooksView, ReviewView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +27,6 @@ urlpatterns = [
 
 router = routers.DefaultRouter()
 router.register(r'api/books', BooksView)
+router.register(r'api/reviews', ReviewView)
 
 urlpatterns += router.urls

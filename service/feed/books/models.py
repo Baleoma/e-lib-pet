@@ -16,7 +16,7 @@ class Book(models.Model):
 class Review(models.Model):
     username = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
-    Book_id = models.ForeignKey('Book', on_delete=models.CASCADE)
+    book_id = models.ForeignKey('Book', on_delete=models.CASCADE)
 
 
 class Tag(models.Model):
